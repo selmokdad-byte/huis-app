@@ -1,0 +1,12 @@
+configuration:
+  pin:
+    name: Pincode
+    description: >-
+      Alleen nodig als je Huis ook als losse app gebruikt (poort 8765).
+      Via de zijbalk van Home Assistant ben je al ingelogd. Kies minimaal 8 cijfers.
+  vapid_subject:
+    name: E-mailadres voor meldingen
+    description: >-
+      Alleen voor webmeldingen in de losse app. Apple en Google gebruiken dit als contactadres.
+network:
+  8080/tcp: Huis als losse app (alleen nodig buiten de zijbalk om)

@@ -1,0 +1,12 @@
+configuration:
+  pin:
+    name: PIN
+    description: >-
+      Only needed when you use Huis as a standalone app (port 8765).
+      Through the Home Assistant sidebar you are already signed in. Use at least 8 digits.
+  vapid_subject:
+    name: Email for notifications
+    description: >-
+      Only for web push in the standalone app. Apple and Google use it as a contact address.
+network:
+  8080/tcp: Huis as a standalone app (only needed outside the sidebar)

@@ -1,0 +1,21 @@
+services:
+  huis:
+    build: .
+    container_name: huis-app
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+
+  # Route B uit INSTALLEREN.md: haal de # weg en zet CLOUDFLARE_TUNNEL_TOKEN in .env
+  # cloudflared:
+  #   image: cloudflare/cloudflared:latest
+  #   container_name: huis-tunnel
+  #   restart: unless-stopped
+  #   command: tunnel --no-autoupdate run
+  #   environment:
+  #     - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+  #   depends_on:
+  #     - huis
